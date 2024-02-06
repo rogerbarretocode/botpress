@@ -2,9 +2,9 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/receive_data', methods=['POST'])
+@app.route('/receive_data', methods=['GET'])
 def receive_data():
-    if request.method == 'POST':
+    if request.method == 'GET':
         lead_data = request.json
         print("Data received:", lead_data)
         return 'Data received successfully!', 200
