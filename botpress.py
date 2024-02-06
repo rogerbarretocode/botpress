@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/receive_data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def receive_data():
     if request.method == 'GET':
         lead_data = request.json
